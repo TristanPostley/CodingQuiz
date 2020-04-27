@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Quiz</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <style>
+            .carousel-item h5, p{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <!-- Start Slide -->
+                    <div class="carousel-item active">
+                        <div class="text">
+                            <h5>JavaScript Quiz</h5>
+                            <button type="button" class="begin btn btn-outline-primary btn-block">Begin</button>
+                            <br>
+                            <button type="button" class="view-highscores btn btn-outline-primary btn-block">View Highscores</button>
+                        </div>
+                    </div>
+                    <!-- Highscore Slide -->
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Leaderboard</h5>
+                            <ol id="leaderboard"></ol>
+                            <button type="button" class="try-again btn btn-outline-primary btn-block">Try again</button>
+                        </div>
+                    </div>
+                    <!-- Question SLides -->
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 1</h5>
+                            <p>Inside which HTML element do we put the JavaScript?</p>
+                            <button type="button" class="btn btn-outline-primary btn-block">&#60scripting&#62</button>
+                            <br>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">&#60script&#62</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">&#60js&#62</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">&#60javascript&#62</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 2</h5>
+                            <p>What is the correct JavaScript syntax to change the content of the HTML element below?<br>
+                                &#60p id="demo">This is a demonstration. &#60/p&#62</p>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">document.getElementById("demo").innerHTML = "Hello World!";</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">document.getElementByName("p").innerHTML = "Hello World!";</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">document.getElement("p").innerHTML = "Hello World!";</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">#demo.innerHTML = "Hello World!";</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 3</h5>
+                            <p>Where is the correct place to insert a JavaScript?</p>
+                            <button type="button" class="btn btn-outline-primary btn-block">The &#60body&#62 section </button>
+                            <br>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">Both the &#60head&#62 section and the &#60body&#62 section are correct  </button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">The &#60head&#62 section</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 4</h5>
+                            <p>What is the correct syntax for referring to an external script called "xxx.js"?</p>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">&#60script src="xxx.js"&#62</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">&#60script name="xxx.js"&#62</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">&#60script href="xxx.js"&#62</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 5</h5>
+                            <p>The external JavaScript file must contain the &#60script&#62 tag.</p>
+                            <button type="button" class="btn btn-outline-primary btn-block">True</button>
+                            <br>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">False</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 6</h5>
+                            <p>How do you write "Hello World" in an alert box?</p>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">alert("Hello World");</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">alertBox("Hello World");</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">msg("Hello World");</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">msgBox("Hello World");  </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 7</h5>
+                            <p>How do you create a function in JavaScript?</p>
+                            <button type="button" class="btn btn-outline-primary btn-block">function:myFunction()</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">function = myFunction()</button>
+                            <br>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">function myFunction()</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 8</h5>
+                            <p>How do you call a function named "myFunction"?</p>
+                            <button type="button" class="btn btn-outline-primary btn-block">call myFunction()</button>
+                            <br>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">myFunction()</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">call function myFunction()</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 9</h5>
+                            <p>How to write an IF statement in JavaScript?</p>
+                            <button type="button" class="correct btn btn-outline-primary btn-block">if (i == 5)</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">if i = 5</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">if i == 5 then</button>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-block">if i = 5 then</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>Question 10</h5>
+                            <p>How to write an IF statement for executing some code if "i" is NOT equal to 5?</p>
+                            <button type="button" class="tally correct btn btn-outline-primary btn-block">if (i != 5)</button>
+                            <br>
+                            <button type="button" class="tally btn btn-outline-primary btn-block">if i &#60&#62 5</button>
+                            <br>
+                            <button type="button" class="tally btn btn-outline-primary btn-block">if i =! 5 then</button>
+                            <br>
+                            <button type="button" class="tally btn btn-outline-primary btn-block">if (i &#60&#62 5)</button>
+                        </div>
+                    </div>
+                    <!-- End Slide -->
+                    <div class="carousel-item">
+                        <div class="text">
+                            <h5>The End</h5>
+                            <p id = "score">You answered ?? correctly.</p>
+                            <form id="username"><input type="text" id="usernameInput" placeholder="Name"/></form>
+                            <br>
+                            <button type="button" class="view-highscores btn btn-outline-primary btn-block">View Highscores</button>
+                            <button type="button" class="try-again btn btn-outline-primary btn-block">Try again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <script src="./script.js"></script>
+    </body>
+</html>
